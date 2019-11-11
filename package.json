@@ -1,0 +1,24 @@
+{
+  "name": "firestore-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "firestore:copy": "babel-node ./src/firestore-copy-data",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Oleh Zasadnyy",
+  "license": "ISC",
+  "dependencies": {
+    "firebase-admin": "^8.7.0",
+    "lodash": "^4.17.15",
+    "promise-fs": "^2.1.1"
+  },
+  "devDependencies": {
+    "core-js": "^3.4.0",
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/preset-env": "^7.7.1"
+  }
+}
