@@ -61,6 +61,16 @@ export function fetchDataFromFirestore(collection, doc) {
     });
 }
 
+export async function fetchDataFromFirestoreSubCollection(collectionGroup, snapshot = false) {
+  const querySnapshot = await firestore.collectionGroup(collectionGroup).get();
+  const collectionData = {};
+  if (snapshot) return querySnapshot;
+  querySnapshot.forEach((doc) => {
+    collectionData[doc.id] = doc.data();
+  });
+  return collectionData;
+}
+
 export function saveDataToFirestore(data, collection, doc) {
   if (!doc) {
     const dataChunks = chunk(Object.entries(data), 400);
