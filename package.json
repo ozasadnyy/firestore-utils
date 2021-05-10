@@ -14,7 +14,7 @@
   "dependencies": {
     "firebase-admin": "^9.2.0",
     "firestore-to-bigquery-export": "^1.7.2",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "promise-fs": "^2.1.1"
   },
   "devDependencies": {
